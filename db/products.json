@@ -1,0 +1,37 @@
+[
+  {
+    "title": "milk",
+    "completed": false,
+    "id": 1,
+    "purchased": false
+  },
+  {
+    "title": "bread",
+    "completed": false,
+    "id": 2,
+    "purchased": true
+  },
+  {
+    "title": "butter",
+    "completed": false,
+    "id": 3,
+    "purchased": false
+  },
+  {
+    "title": "jam",
+    "completed": false,
+    "id": 4,
+    "purchased": true
+  },
+  {
+    "title": "juice",
+    "completed": false,
+    "id": 5,
+    "purchased": false
+  },
+  {
+    "title": "Apples",
+    "purchased": false,
+    "id": 6
+  }
+]
