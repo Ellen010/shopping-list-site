@@ -1,11 +1,5 @@
 [
   {
-    "title": "milk",
-    "completed": false,
-    "id": 1,
-    "purchased": false
-  },
-  {
     "title": "bread",
     "completed": false,
     "id": 2,
@@ -28,10 +22,5 @@
     "completed": false,
     "id": 5,
     "purchased": false
-  },
-  {
-    "title": "Apples",
-    "purchased": false,
-    "id": 6
   }
 ]
