@@ -6,18 +6,6 @@
     "purchased": true
   },
   {
-    "title": "butter",
-    "completed": false,
-    "id": 3,
-    "purchased": false
-  },
-  {
-    "title": "jam",
-    "completed": false,
-    "id": 4,
-    "purchased": true
-  },
-  {
     "title": "juice",
     "completed": false,
     "id": 5,
