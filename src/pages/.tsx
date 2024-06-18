@@ -27,6 +27,13 @@ export default function Home() {
     }
   };
 
+  const setAllPurchased =async (purchased:boolean) => {
+    for (const product of await productRepo.find()) {
+      await productRepo.save({...product, purchased});
+    }
+    fetchProducts().then(setProducts);
+  };
+
   useEffect(()=> {
     fetchProducts().then(setProducts);
   },[]);
@@ -103,6 +110,18 @@ export default function Home() {
             </div>
           );
         })}
+        <div className="border-t px-6 p-2 gap-4 flex justify-between">
+          <button 
+          className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg"
+          onClick={() =>setAllPurchased(true)}>
+            Set all purchased</button>
+            <div className="gap-4"></div>
+            <div></div>
+            <button 
+          className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg"
+          onClick={() =>setAllPurchased(false)}>
+            Set all to not purchased</button>
+        </div>
       </main>
     </div>
   );
