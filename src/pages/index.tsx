@@ -2,7 +2,7 @@ import { useEffect, useState, FormEvent } from "react";
 import { remult } from "remult";
 import { Product } from "../shared/Product";
 import { ProductsController } from "@/shared/ProductsController";
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const productRepo = remult.repo(Product);
 
@@ -42,12 +42,17 @@ export default function Home() {
   useEffect(() => {
     if (status === "unauthenticated") signIn();
     else fetchProducts().then(setProducts);
-  }, [status]);
+  }, [session]);
 
   return (
     <div className="bg-blue-custom h-screen flex items-center flex-col justify-center text-lg">
-      <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-1">Shopping list {products.length} </h1>
+      <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
+        <div className="flex justify-between px-6 p-2 border-b">
+          Welcome to our website,  {session?.data?.user?.name}{" "}
+          <button onClick={() => signOut()}>Sign out </button>
+        </div>
+        
         <form onSubmit={addProduct} className="border-b-2 px-6 gap-2 flex">
           <input
             value={newProductTitle}
@@ -106,7 +111,7 @@ export default function Home() {
         })}
         <div className="border-t px-6 p-2 gap-4 flex justify-between">
           <button
-            className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg"
+            className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
             onClick={() => setAllPurchased(true)}
           >
             Set all purchased
@@ -114,7 +119,7 @@ export default function Home() {
           <div className="gap-4"></div>
           <div></div>
           <button
-            className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg"
+            className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
             onClick={() => setAllPurchased(false)}
           >
             Set all to not purchased
