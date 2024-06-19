@@ -1,6 +1,7 @@
 import { useEffect, useState, FormEvent } from "react";
 import { remult } from "remult";
 import { Product } from "../shared/Product";
+import { ProductController } from "@/shared/ProductController";
 
 const productRepo = remult.repo(Product);
 
@@ -28,10 +29,8 @@ export default function Home() {
   };
 
   const setAllPurchased =async (purchased:boolean) => {
-    for (const product of await productRepo.find()) {
-      await productRepo.save({...product, purchased});
-    }
-    fetchProducts().then(setProducts);
+   await ProductController.setAllPurchased(completed);
+   fetchProducts().then(setProducts);
   };
 
   useEffect(()=> {
