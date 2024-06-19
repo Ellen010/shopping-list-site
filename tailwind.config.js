@@ -6,7 +6,15 @@ module.exports = {
     './src/**/*.{html,js,tsx,ts}',
   ],
   theme:{
-    extend:{},
+    extend:{
+      colors: {
+        'blue-custom': '#C6D4D8',
+        'green-custom': '#049D59',
+      },
+      spacing: {
+        '1': '5px', 
+      },
+    },
   },
   plugins:[],
 }

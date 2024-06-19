@@ -1,4 +1,4 @@
-import { Entity, Fields } from "remult"
+import { Entity, Fields, Allow, remult } from "remult"
 
 @Entity("products",  {
     allowApiCrud: Allow.authenticated
