@@ -2,9 +2,10 @@ import { NextApiRequest } from "next";
 import NextAuth from "next-auth/next";
 import CredentialsProvider  from "next-auth/providers/credentials"; 
 import {UserInfo} from "remult";
+import { getToken } from "next-auth/jwt";
 
 const validUsers:UserInfo[]=[
-    { id:"1", name:"Anna" },
+    { id:"1", name:"Anna", roles: ["admin"] },
     { id:"2", name:"Marc" },
 ]
 export default NextAuth ({
@@ -13,7 +14,7 @@ export default NextAuth ({
             credentials:{
                 name:{
                     label:"Username",
-                    placeholder: "Enter Anna or Marc"
+                    placeholder: "Type Anna or Marc"
                 }
             },
             authorize:
@@ -25,5 +26,5 @@ export default NextAuth ({
 
 export async function getUserFromNextAuth (req: NextApiRequest) {
     const token= await getToken({ req });
-    return validUsers.find(user => user.id === token.sub)
+    return validUsers.find(user => user.id === token?.sub)
 }

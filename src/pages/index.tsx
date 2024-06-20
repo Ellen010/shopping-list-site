@@ -66,7 +66,7 @@ export default function Home() {
             </svg>
           </button>
         </form>
-        {products.map((product) => {
+        {products.map((products) => {
           const setProduct = (value: Product) =>
             setProducts(products.map((t) => (t === product ? value : t)));
 
