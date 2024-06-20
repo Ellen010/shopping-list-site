@@ -11,6 +11,7 @@
   "dependencies": {
     "next": "14.2.3",
     "next-auth": "^4.24.7",
+    "pg": "^8.12.0",
     "react": "^18",
     "react-dom": "^18",
     "remult": "^0.26.13"
