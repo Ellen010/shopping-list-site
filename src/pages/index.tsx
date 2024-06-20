@@ -53,7 +53,7 @@ export default function Home() {
           <button onClick={() => signOut()}>Sign out</button>
         </div>
         
-        <form onSubmit={addProduct} className="border-b-2 px-6 gap-2 flex">
+        <form onSubmit={addProduct} className="border-b-3 px-8 gap-2 flex">
           <input
             value={newProductTitle}
             onChange={(e) => setNewProductTitle(e.target.value)}
