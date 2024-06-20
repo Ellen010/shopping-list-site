@@ -49,8 +49,8 @@ export default function Home() {
       <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-2 border-b">
-          Welcome to our website,  {session?.data?.user?.name}{" "}
-          <button onClick={() => signOut()}>Sign out </button>
+          Welcome to our website, {session?.user?.name}{" "}
+          <button onClick={() => signOut()}>Sign out</button>
         </div>
         
         <form onSubmit={addProduct} className="border-b-2 px-6 gap-2 flex">
@@ -66,7 +66,7 @@ export default function Home() {
             </svg>
           </button>
         </form>
-        {products.map((products) => {
+        {products.map((product) => {
           const setProduct = (value: Product) =>
             setProducts(products.map((t) => (t === product ? value : t)));
 
@@ -76,9 +76,13 @@ export default function Home() {
           const setTitle = (title: string) => setProduct({ ...product, title });
 
           const saveProduct = async () => {
+            console.log("Save button clicked for product:", product);
             try {
-              setProduct(await productRepo.save(product));
+              const savedProduct = await productRepo.save(product);
+              setProduct(savedProduct);
+              console.log("Product saved:", savedProduct);
             } catch (err: any) {
+              console.error("Error saving product:", err.message);
               alert(err.message);
             }
           };
@@ -94,7 +98,7 @@ export default function Home() {
 
           return (
             <div key={product.id} className="border-b px-6 gap-2 flex items-center p-2">
-              <input type="checkbox" checked={product.purchased} className="w-6 h-6" onChange={(e) => setPurchased((e.target as HTMLInputElement).checked)} />
+              <input type="checkbox" checked={product.purchased} className="w-6 h-6" onChange={(e) => setPurchased(e.target.checked)} />
               <input value={product.title} className="w-full" onChange={(e) => setTitle(e.target.value)} />
               <button onClick={saveProduct}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">

@@ -1,14 +1,17 @@
 [
   {
     "title": "bread",
-    "completed": false,
     "id": 2,
     "purchased": true
   },
   {
     "title": "juice",
-    "completed": false,
     "id": 5,
+    "purchased": true
+  },
+  {
+    "title": "milk",
+    "id": 1,
     "purchased": true
   }
 ]
