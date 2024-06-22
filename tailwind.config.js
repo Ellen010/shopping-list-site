@@ -14,6 +14,9 @@ module.exports = {
       spacing: {
         '1': '5px', 
       },
+      backgroundImage: theme => ({
+        'custom-bg': "url('/background.png')",
+      }),
     },
   },
   plugins:[],

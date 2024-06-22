@@ -45,7 +45,7 @@ export default function Home() {
   }, [session]);
 
   return (
-    <div className="bg-blue-custom h-screen flex items-center flex-col justify-center text-lg">
+    <div className="bg-custom-bg h-screen flex items-center flex-col justify-center text-lg bg-cover">
       <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-2 border-b">
