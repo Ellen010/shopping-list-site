@@ -3,7 +3,6 @@ import { remult } from "remult";
 import { Product } from "../shared/Product";
 import { ProductsController } from "@/shared/ProductsController";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useRouter } from "next/router";
 
 const productRepo = remult.repo(Product);
 
@@ -17,17 +16,8 @@ async function fetchProducts() {
 
 export default function Home() {
   const { data: session, status } = useSession();
-  const router = useRouter();
   const [products, setProducts] = useState<Product[]>([]);
   const [newProductTitle, setNewProductTitle] = useState("");
-
-  useEffect(() => {
-    if (status === "unauthenticated") {
-      router.push('/auth/signin');
-    } else {
-      fetchProducts().then(setProducts);
-    }
-  }, [status]);
 
   const addProduct = async (e: FormEvent) => {
     e.preventDefault();
@@ -49,17 +39,14 @@ export default function Home() {
     }
   };
 
-  if (status === "loading") {
-    return <div>Loading...</div>;
-  }
-
-  if (status === "unauthenticated") {
-    return null;  // You can also return a spinner or some loading component here
-  }
+  useEffect(() => {
+    if (status === "unauthenticated") signIn();
+    else fetchProducts().then(setProducts);
+  }, [session]);
 
   return (
     <div className="bg-picMain h-screen flex items-center flex-col justify-center text-lg bg-cover">
-      <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-2">Shopping list {products.length}</h1>
+      <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-10 border-b">
           Welcome to our website, {session?.user?.name}{" "}
@@ -89,10 +76,13 @@ export default function Home() {
           const setTitle = (title: string) => setProduct({ ...product, title });
 
           const saveProduct = async () => {
+            console.log("Save button clicked for product:", product);
             try {
               const savedProduct = await productRepo.save(product);
               setProduct(savedProduct);
+              console.log("Product saved:", savedProduct);
             } catch (err: any) {
+              console.error("Error saving product:", err.message);
               alert(err.message);
             }
           };
