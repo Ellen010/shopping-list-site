@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <div className="bg-picMain h-screen flex items-center flex-col justify-center text-lg bg-cover">
-      <h1 className="text-green-custom text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
+      <h1 className="text-gold text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-10 border-b">
           Welcome to our website, {session?.user?.name}{" "}
