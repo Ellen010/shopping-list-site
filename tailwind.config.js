@@ -15,7 +15,8 @@ module.exports = {
         '1': '5px', 
       },
       backgroundImage: theme => ({
-        'custom-bg': "url('/background.png')",
+        'picMain': "url('/backgroundMain.png')",
+        'picLogin': "url('/backgroundLogin.png')",
       }),
     },
   },
