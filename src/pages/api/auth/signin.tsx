@@ -1,14 +1,17 @@
 import { signIn } from "next-auth/react";
+import { FormEvent } from "react";
 
 export default function SignIn() {
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { username } = e.target.elements;
+    const { username } = e.currentTarget.elements as typeof e.currentTarget.elements & {
+      username: { value: string };
+    };
     signIn('credentials', { name: username.value });
   };
 
   return (
-    <div className="bg-picLogin h-screen flex items-center justify-center bg-cover">
+    <div className="bg-custom-bg h-screen flex items-center justify-center bg-cover">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
         <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
         <form onSubmit={handleSubmit}>
