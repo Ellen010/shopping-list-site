@@ -17,6 +17,7 @@ module.exports = {
       backgroundImage: theme => ({
         'picMain': "url('/backgroundMain.png')",
         'picLogin': "url('/backgroundLogin.png')",
+        'picBtn': "url('backgroundButton1.png')",
       }),
     },
   },

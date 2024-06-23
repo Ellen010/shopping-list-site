@@ -46,14 +46,14 @@ export default function Home() {
 
   return (
     <div className="bg-picMain h-screen flex items-center flex-col justify-center text-lg bg-cover">
-      <h1 className="text-gold text-7xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
+      <h1 className="text-gold text-8xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-10 border-b">
           Welcome to our website, {session?.user?.name}{" "}
           <button onClick={() => signOut()}>Sign out</button>
         </div>
         
-        <form onSubmit={addProduct} className="bg-picMain border-b-3 px-8 gap-2 flex">
+        <form onSubmit={addProduct} className="border-b-3 px-8 gap-2 flex">
           <input
             value={newProductTitle}
             onChange={(e) => setNewProductTitle(e.target.value)}
@@ -101,7 +101,7 @@ export default function Home() {
               <input type="checkbox" checked={product.purchased} className="w-6 h-6" onChange={(e) => setPurchased(e.target.checked)} />
               <input value={product.title} className="w-full" onChange={(e) => setTitle(e.target.value)} />
               <button onClick={saveProduct}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="bg-picBtn" className="size-6">
                   <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
                 </svg>
               </button>
