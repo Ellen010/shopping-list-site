@@ -46,8 +46,8 @@ export default function Home() {
 
   return (
     <div className="bg-picMain h-screen flex items-center flex-col justify-center text-lg bg-cover">
-      <h1 className="text-gold text-8xl italic bold shadow-lg mb-2">Shopping list {products.length} </h1>
-      <main className="bg-white border rounded-2xl shadow-lg m-15 w-screen max-w-md">
+      <h1 className="text-gold text-8xl italic bold shadow-lg mb-10">Shopping list {products.length} </h1>
+      <main className="bg-white border rounded-2xl shadow-lg m-15 w-screen max-w-md mt-10">
         <div className="flex justify-between px-15 p-5 border-b">
           Welcome to our website, {session?.user?.name}{" "}
           <div className="gap-4 flex justify-between">
