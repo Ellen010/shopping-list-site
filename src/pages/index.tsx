@@ -50,7 +50,7 @@ export default function Home() {
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-10 border-b">
           Welcome to our website, {session?.user?.name}{" "}
-          <div className="border-t px-6 p-2 gap-4 flex justify-between">
+          <div className="gap-4 flex justify-between">
           <button 
           className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
           style={{
