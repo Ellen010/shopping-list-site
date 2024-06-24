@@ -122,9 +122,9 @@ export default function Home() {
             </div>
           );
         })}
-        <div className="border-t px-6 p-2 gap-4 flex justify-between">
+        <div className="border-t px-6 p-2 gap-4 flex justify-between mt-10">
           <button
-            className="text-white px-3 py-1 font-semibold rounded-lg mb-2 mt-10"
+            className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
             style={{
               backgroundImage: 'url(/backgroundBtn1.png)',
               backgroundSize: 'cover',
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="gap-4"></div>
           <div></div>
           <button
-            className="text-white px-3 py-1 font-semibold rounded-lg mb-2 mt-10"
+            className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
             style={{
               backgroundImage: 'url(/backgroundBtn2.png)',
               backgroundSize: 'cover',
