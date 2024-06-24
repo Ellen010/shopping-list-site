@@ -117,7 +117,7 @@ export default function Home() {
           <button
             className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
             style={{
-              backgroundImage: 'url(/backgroundBtn.png)',
+              backgroundImage: 'url(/backgroundBtn1.png)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
@@ -130,7 +130,7 @@ export default function Home() {
           <button
             className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
             style={{
-              backgroundImage: 'url(/backgroundBtn.png)',
+              backgroundImage: 'url(/backgroundBtn2.png)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
