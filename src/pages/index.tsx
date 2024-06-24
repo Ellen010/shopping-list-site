@@ -66,7 +66,7 @@ export default function Home() {
           <input
             value={newProductTitle}
             onChange={(e) => setNewProductTitle(e.target.value)}
-            className="border-b gap-2 h-30 w-130"
+            className="border-b gap-2 h-30 w-120"
             placeholder="What needs to be purchased?"
           />
           <button>
