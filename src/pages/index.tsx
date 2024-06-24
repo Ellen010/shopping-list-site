@@ -116,6 +116,11 @@ export default function Home() {
         <div className="border-t px-6 p-2 gap-4 flex justify-between">
           <button
             className="bg-gold-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
+            style={{
+              backgroundImage: 'url(/pic1.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
             onClick={() => setAllPurchased(true)}
           >
             Set all purchased
@@ -124,6 +129,11 @@ export default function Home() {
           <div></div>
           <button
             className="bg-gold-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
+            style={{
+              backgroundImage: 'url(/pic1.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
             onClick={() => setAllPurchased(false)}
           >
             Set all to not purchased
