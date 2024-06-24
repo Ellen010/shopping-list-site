@@ -66,7 +66,7 @@ export default function Home() {
           <input
             value={newProductTitle}
             onChange={(e) => setNewProductTitle(e.target.value)}
-            className="border-b gap-2 h-30 w-120"
+            className="border-b gap-2 h-30 w-180"
             placeholder="What needs to be purchased?"
           />
           <button>
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
           );
         })}
-        <div className="border-t px-6 p-2 gap-4 flex justify-between">
+        <div className="border-t px-6 p-2 gap-4 flex justify-between mt-10">
           <button
             className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
             style={{
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="gap-4"></div>
           <div></div>
           <button
-            className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
+            className="text-white px-3 py-1 font-semibold rounded-lg mb-2 mt-10"
             style={{
               backgroundImage: 'url(/backgroundBtn2.png)',
               backgroundSize: 'cover',
