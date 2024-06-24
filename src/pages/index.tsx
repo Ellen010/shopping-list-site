@@ -122,9 +122,9 @@ export default function Home() {
             </div>
           );
         })}
-        <div className="border-t px-6 p-2 gap-4 flex justify-between mt-10">
+        <div className="border-t px-6 p-2 gap-4 flex justify-between">
           <button
-            className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
+            className="text-white px-3 py-1 font-semibold rounded-lg mb-2 mt-10"
             style={{
               backgroundImage: 'url(/backgroundBtn1.png)',
               backgroundSize: 'cover',
