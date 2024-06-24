@@ -50,7 +50,14 @@ export default function Home() {
       <main className="bg-white border rounded-lg shadow-lg m-5 w-screen max-w-md">
         <div className="flex justify-between px-6 p-10 border-b">
           Welcome to our website, {session?.user?.name}{" "}
-          <button onClick={() => signOut()}>Sign out</button>
+          <button 
+          className="text-white px-3 py-1 font-semibold rounded-lg mb-2"
+          style={{
+            backgroundImage: 'url(/backgroundBtn2.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+          onClick={() => signOut()}>Sign out</button>
         </div>
         
         <form onSubmit={addProduct} className="border-b-3 px-8 gap-2 flex">
