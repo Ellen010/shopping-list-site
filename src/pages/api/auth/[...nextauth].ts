@@ -4,6 +4,7 @@ import CredentialsProvider  from "next-auth/providers/credentials";
 import {UserInfo} from "remult";
 import { getToken } from "next-auth/jwt";
 
+<div className="bg-picMain h-screen flex items-center flex-col justify-center text-lg bg-cover">
 const validUsers:UserInfo[]=[
     { id:"1", name:"Anna", roles: ["admin"] },
     { id:"2", name:"Marc" },
@@ -23,6 +24,7 @@ export default NextAuth ({
         })
     ]
 })
+          </div>
 
 export async function getUserFromNextAuth (req: NextApiRequest) {
     const token= await getToken({ req });
