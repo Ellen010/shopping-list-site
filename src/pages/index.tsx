@@ -115,7 +115,7 @@ export default function Home() {
         })}
         <div className="border-t px-6 p-2 gap-4 flex justify-between">
           <button
-            className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
+            className="bg-gold-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
             onClick={() => setAllPurchased(true)}
           >
             Set all purchased
@@ -123,7 +123,7 @@ export default function Home() {
           <div className="gap-4"></div>
           <div></div>
           <button
-            className="bg-blue-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
+            className="bg-gold-600 text-white px-3 py-1 font-semibold rounded-lg mb-2"
             onClick={() => setAllPurchased(false)}
           >
             Set all to not purchased
