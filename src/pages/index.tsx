@@ -77,7 +77,7 @@ export default function Home() {
                 </pattern>
               </defs>
               <path d="M12 4.5v15m7.5-7.5h-15" fill="url(#imagePattern)" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              {/* <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /> */}
             </svg>
           </button>
         </form>
