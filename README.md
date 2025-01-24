@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+<a href="https://shopping-list-site.vercel.app" target="_blank">
+<img src="https://github.com/user-attachments/assets/bb852260-a9f3-429f-8c71-5453d18f97a4" alt="Shopping list official website 1"></a>
+
+
+<a href="https://shopping-list-site.vercel.app" target="_blank">
+<img src="https://github.com/user-attachments/assets/2950e894-dd3d-4f57-8023-7a56484f5474" alt="Shopping list official website 1"></a>
+
+
+
+
 ## Getting Started
 
 First, run the development server:
